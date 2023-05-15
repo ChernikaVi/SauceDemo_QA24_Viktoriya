@@ -43,8 +43,9 @@ public class SauceDemoTests {
 
             WebElement addToCartButton = driver.findElement(By.cssSelector("#add-to-cart-sauce-labs-backpack"));
             addToCartButton.click();
-            addToCartButton = driver.findElement(By.cssSelector("#remove-sauce-labs-backpack")); // проверка
-            Assert.assertTrue(addToCartButton.isDisplayed());
+            
+            WebElement removeButton = driver.findElement(By.cssSelector("#remove-sauce-labs-backpack")); // проверка
+            Assert.assertTrue(removeButton.isDisplayed());
 
             WebElement cartButton = driver.findElement(By.cssSelector("#shopping_cart_container > a > span"));
             cartButton.click();
@@ -53,10 +54,10 @@ public class SauceDemoTests {
             Assert.assertTrue(continueShoppingButton.isDisplayed());
 
             WebElement priceOfInventory = driver.findElement(By.cssSelector(".inventory_item_price")); // проверка
-            Assert.assertEquals("$29.99", "$29.99");
+            Assert.assertEquals(priceOfInventory.getText(), "$29.99");
 
             WebElement nameOfInventory = driver.findElement(By.cssSelector(".inventory_item_name")); // проверка
-            Assert.assertEquals("Sauce Labs Backpack", "Sauce Labs Backpack");
+            Assert.assertEquals(nameOfInventory.getText(), "Sauce Labs Backpack");
         }
     }
 }
