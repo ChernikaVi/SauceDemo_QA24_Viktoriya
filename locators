@@ -1,0 +1,66 @@
+    *id
+By.id(“<add-to-cart-sauce-labs-bike-light>”)
+By.id("<remove-sauce-labs-backpack>")
+By.id("<add-to-cart-sauce-labs-fleece-jacket>")
+    *name
+By.name("login-button")
+By.name("password")
+By.name("add-to-cart-sauce-labs-bike-light")
+    *classname
+By.className("inventory_item_price")
+By.className("inventory_item_name")
+By.className("btn btn_primary btn_small btn_inventory")
+    *tagname
+By.tagName(“div”)
+By.tagName(“img”)
+By.tagName(“span”)
+    *linktext
+By.linkText(“Sause Labs Backpack”)
+By.linkText(“Sause Labs Bolt T-Shirt”)
+By.linkText(“Sauce Labs Onesie”)
+    *partiallinktext
+By.partialLinkText(“T-Shirt”)
+By.partialLinkText(“Backpack”)
+By.partialLinkText(“Fleece”)
+
+
+XPATH
+    Поиск по атрибуту, например By.xpath("//tag[@attribute='value']");
+("//*[@id='add-to-cart-sauce-labs-bolt-t-shirt']")
+    Поиск по тексту, например By.xpath("//tag[text()='text']");
+("//*[text()='T-Shirt']")
+    Поиск по частичному совпадению атрибута, например By.xpath("//tag[contains(@attribute,'text')]");
+("//*[contains(@id,'bolt-t-shirt')]")
+    Поиск по частичному совпадению текста, например By.xpath("//tag[contains(text(),'text')]");
+("//*[contains(test(),'T-Shirt')]")
+    ancestor, например //*[text()='Enterprise Testing']//ancestor::div
+//*[text()='From American Apparel']//ancestor::div
+    descendant
+ //*[@id='remove-sauce-labs-backpack']//descendant::button
+    following
+"//div[@class='btn btn_secondary btn_small btn_inventory'//[@class='inventory_item_container']]/following::div"
+
+    *поиск элемента с условием AND, например //input[@class='_2zrpKA _1dBPDZ' and @type='text']
+ //input[@class='btn btn_secondary btn_small btn_inventory' and @name='remove-sauce-labs-backpack']
+
+CSS
+    .class
+By.cssSelector(".inventory_item_price")
+By.cssSelector(".inventory_item_name")
+By.cssSelector(".btn btn_primary btn_small btn_inventory")
+    .class1.class2
+By.cssSelector(".btn btn_primary btn_small btn_inventory.inventory_item_name")
+    .class1 .class2
+By.cssSelector(".btn btn_primary btn_small btn_inventory .inventory_details_price")
+       [attribute=value]
+[name="remove-sauce-labs-backpack"]
+       [attribute~=value]
+[title~="Swag"]
+       [attribute|=value]
+[lang|="sw-"]
+       [attribute^=value]
+a[href^="https"]
+       [attribute$=value]
+a[href$=".jpg"]
+       [attribute*=value]
+a[href*="saucedemo"]
