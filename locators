@@ -1,7 +1,7 @@
     *id
-By.id(“<add-to-cart-sauce-labs-bike-light>”)
-By.id("<remove-sauce-labs-backpack>")
-By.id("<add-to-cart-sauce-labs-fleece-jacket>")
+By.id(“add-to-cart-sauce-labs-bike-light”)
+By.id("remove-sauce-labs-backpack")
+By.id("add-to-cart-sauce-labs-fleece-jacket")
     *name
 By.name("login-button")
 By.name("password")
