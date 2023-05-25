@@ -19,13 +19,13 @@ public abstract class BaseTest {
     protected final static String LASTNAME = "Zlobich";
     protected final static String ZIPCODE = "Vika123";
     protected WebDriver driver;
-    LoginPage loginPage;
-    ProductsPage productsPage;
-    CartPage cartPage;
-    CheckOutYourInformationPage checkOutPage;
-    CheckoutOverviewPage checkoutOverviewPage;
-    CheckoutCompletePage checkoutCompletePage;
-    ProductsDetailsPage productDetailsPage;
+    protected LoginPage loginPage;
+    protected ProductsPage productsPage;
+    protected CartPage cartPage;
+    protected CheckOutYourInformationPage checkOutPage;
+    protected CheckoutOverviewPage checkoutOverviewPage;
+    protected CheckoutCompletePage checkoutCompletePage;
+    protected ProductsDetailsPage productDetailsPage;
 
     @BeforeClass
     public void setUp() {
